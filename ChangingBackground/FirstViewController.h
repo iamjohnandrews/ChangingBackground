@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *firstVCDisplayLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *goForwardButtonOutlet;
 
 - (IBAction)goForwardButtonPressed;
 

@@ -14,10 +14,17 @@
 @end
 
 @implementation FirstViewController
+@synthesize firstVCDisplayLabel, goForwardButtonOutlet;
 
 - (void)viewDidLoad
 {
+    //set background image
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"blue.png"]];
+    
+    //style the button
+    goForwardButtonOutlet.layer.cornerRadius = 8;
+    goForwardButtonOutlet.layer.borderWidth = 1;
+    goForwardButtonOutlet.backgroundColor = [UIColor whiteColor];
 }
 
 - (IBAction)goForwardButtonPressed {

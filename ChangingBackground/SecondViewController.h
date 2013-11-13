@@ -10,6 +10,10 @@
 
 @interface SecondViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *secondVCDisplayLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *goBackButtonOutlet;
+
 - (IBAction)goBackButtonPressed;
 
 @end
