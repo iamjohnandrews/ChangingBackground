@@ -10,7 +10,7 @@
 #import "BackgroundColorDelegate.h"
 #import "SecondViewController.h"
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <BackgroundColorDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *firstVCDisplayLabel;
 

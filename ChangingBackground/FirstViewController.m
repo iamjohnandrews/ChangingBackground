@@ -29,13 +29,13 @@
     [goForwardButtonOutlet addTarget:self action:@selector(highlightButtonWhenPressed) forControlEvents:UIControlEventTouchDown];
     [goForwardButtonOutlet addTarget:self action:@selector(returnButtonToNormalColor) forControlEvents:UIControlEventTouchUpInside];
     
-    SecondViewController *secondVC = [[SecondViewController alloc] init];
-    secondVC.fadeBackgroundColorDelegate = self;
 }
 
 - (IBAction)goForwardButtonPressed {
     SecondViewController *secondViewController = SecondViewController.new;
     [self.navigationController pushViewController:secondViewController animated:YES];
+    
+    secondViewController.fadeBackgroundColorDelegate = self;
 }
 
 - (void)highlightButtonWhenPressed{
@@ -48,7 +48,8 @@
 
 - (void)secondVCToFirstVCFadeBackgroundColor {
     NSLog(@"Hooray, fade background color method was called when user pressed Back");
-    [UIView transitionWithView:nil duration:0.2 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+    
+    [UIView transitionWithView:nil duration:0.8 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
         self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"green.png"]];
         
     } completion:^(BOOL finished) {

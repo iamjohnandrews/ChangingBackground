@@ -39,7 +39,7 @@
 }
 
 - (void)firstVCToSecondVCFadeBackgroundColor {
-    NSLog(@"the fade backgound methos is getting fired");
+    NSLog(@"the fade backgound method is getting fired");
     
     [UIView transitionWithView:nil duration:0.8 options:UIViewAnimationOptionCurveLinear animations:^{
         self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"blue.png"]];
