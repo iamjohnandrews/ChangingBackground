@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BackgroundColorDelegate.h"
 
 @interface SecondViewController : UIViewController
+
+@property (strong, nonatomic) id<BackgroundColorDelegate> fadeBackgroundColorDelegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *secondVCDisplayLabel;
 

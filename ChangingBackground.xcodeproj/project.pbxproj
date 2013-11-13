@@ -50,6 +50,7 @@
 		001809E8171C6764002D3E93 /* blue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue@2x.png"; sourceTree = "<group>"; };
 		001809E9171C6764002D3E93 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		001809EA171C6764002D3E93 /* green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green@2x.png"; sourceTree = "<group>"; };
+		8E806A7318341B25007D05FA /* BackgroundColorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BackgroundColorDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +97,7 @@
 		001809BE171C637E002D3E93 /* ChangingBackground */ = {
 			isa = PBXGroup;
 			children = (
+				8E806A7318341B25007D05FA /* BackgroundColorDelegate.h */,
 				001809EF171C6768002D3E93 /* BackgroundImages */,
 				001809D5171C63FC002D3E93 /* AppDelegate */,
 				001809DC171C6453002D3E93 /* ViewControllers */,
@@ -356,6 +358,7 @@
 				001809D4171C637E002D3E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

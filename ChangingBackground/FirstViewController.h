@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BackgroundColorDelegate.h"
 
 @interface FirstViewController : UIViewController
+
+@property (strong, nonatomic) id<BackgroundColorDelegate> fadeBackgroundColorDelegate;
+
 @property (weak, nonatomic) IBOutlet UILabel *firstVCDisplayLabel;
 
 @property (weak, nonatomic) IBOutlet UIButton *goForwardButtonOutlet;

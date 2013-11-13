@@ -25,6 +25,8 @@
     goForwardButtonOutlet.layer.cornerRadius = 8;
     goForwardButtonOutlet.layer.borderWidth = 1;
     goForwardButtonOutlet.backgroundColor = [UIColor whiteColor];
+    
+    //highlight button
     [goForwardButtonOutlet addTarget:self action:@selector(highlightButtonWhenPressed) forControlEvents:UIControlEventTouchDown];
     [goForwardButtonOutlet addTarget:self action:@selector(returnButtonToNormalColor) forControlEvents:UIControlEventTouchUpInside];
     
@@ -33,6 +35,8 @@
 - (IBAction)goForwardButtonPressed {
     SecondViewController *secondViewController = SecondViewController.new;
     [self.navigationController pushViewController:secondViewController animated:YES];
+    
+    [self.fadeBackgroundColorDelegate firstVCToSecondVCFadeBackgroundColor];
 }
 
 - (void)highlightButtonWhenPressed{
