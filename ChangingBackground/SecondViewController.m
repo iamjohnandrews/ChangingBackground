@@ -10,11 +10,18 @@
 
 
 @implementation SecondViewController
-@synthesize secondVCDisplayLabel;
+@synthesize secondVCDisplayLabel, goBackButtonOutlet;
 
 - (void)viewDidLoad
 {
+    //set background
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"green.png"]];
+    
+    //style the button
+    goBackButtonOutlet.layer.cornerRadius = 8;
+    goBackButtonOutlet.layer.borderWidth = 1;
+    goBackButtonOutlet.backgroundColor = [UIColor whiteColor];
+
 }
 
 - (IBAction)goBackButtonPressed {
