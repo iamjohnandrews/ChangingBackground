@@ -25,6 +25,7 @@
     goForwardButtonOutlet.layer.cornerRadius = 8;
     goForwardButtonOutlet.layer.borderWidth = 1;
     goForwardButtonOutlet.backgroundColor = [UIColor whiteColor];
+    
 }
 
 - (IBAction)goForwardButtonPressed {
