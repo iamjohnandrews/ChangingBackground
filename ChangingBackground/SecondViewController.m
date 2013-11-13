@@ -12,20 +12,34 @@
 @implementation SecondViewController
 @synthesize secondVCDisplayLabel, goBackButtonOutlet;
 
-- (void)viewDidLoad
-{
-    //set background
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"green.png"]];
+- (void)viewDidLoad {
+    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"blue.png"]];
     
     //style the button
     goBackButtonOutlet.layer.cornerRadius = 8;
     goBackButtonOutlet.layer.borderWidth = 1;
     goBackButtonOutlet.backgroundColor = [UIColor whiteColor];
+    [goBackButtonOutlet addTarget:self action:@selector(highlightButtonWhenPressed) forControlEvents:UIControlEventTouchDown];
+    [goBackButtonOutlet addTarget:self action:@selector(returnButtonToNormalColor) forControlEvents:UIControlEventTouchUpInside];
 
 }
 
 - (IBAction)goBackButtonPressed {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)highlightButtonWhenPressed{
+    goBackButtonOutlet.backgroundColor = [UIColor blueColor];
+}
+
+- (void)returnButtonToNormalColor{
+    goBackButtonOutlet.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)fadeViewBackgroundColor {
+    [UIView animateWithDuration:0.5 animations:^{
+        self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"green.png"]];
+    }];
 }
 
 @end
