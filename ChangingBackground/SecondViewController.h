@@ -11,7 +11,7 @@
 
 @interface SecondViewController : UIViewController
 
-@property (strong, nonatomic) id<BackgroundColorDelegate> fadeBackgroundColorDelegate;
+@property (weak, nonatomic) id fadeBackgroundColorDelegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *secondVCDisplayLabel;
 

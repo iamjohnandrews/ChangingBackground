@@ -10,20 +10,18 @@
 
 
 @implementation SecondViewController
-@synthesize secondVCDisplayLabel, goBackButtonOutlet;
+@synthesize secondVCDisplayLabel, goBackButtonOutlet, fadeBackgroundColorDelegate;
 
-- (void)viewDidLoad {
-    self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"green.png"]];
-    
+- (void)viewDidLoad {    
     //style the button
     goBackButtonOutlet.layer.cornerRadius = 8;
-    goBackButtonOutlet.layer.borderWidth = 1;
     goBackButtonOutlet.backgroundColor = [UIColor whiteColor];
     
     //highlight button
     [goBackButtonOutlet addTarget:self action:@selector(highlightButtonWhenPressed) forControlEvents:UIControlEventTouchDown];
     [goBackButtonOutlet addTarget:self action:@selector(returnButtonToNormalColor) forControlEvents:UIControlEventTouchUpInside];
 
+    [self firstVCToSecondVCFadeBackgroundColor];
 }
 
 - (IBAction)goBackButtonPressed {
@@ -41,12 +39,14 @@
 }
 
 - (void)firstVCToSecondVCFadeBackgroundColor {
-    [UIView transitionWithView:nil duration:5.0f options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
-        self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"green.png"]];
-
-    } completion:^(BOOL finished) {
+    NSLog(@"the fade backgound methos is getting fired");
+    
+    [UIView transitionWithView:nil duration:0.8 options:UIViewAnimationOptionCurveLinear animations:^{
         self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"blue.png"]];
-    }];
+    } completion:^(BOOL finished) {
+        self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"green.png"]];
+    }]; 
+    
 }
 
 @end

@@ -10,8 +10,6 @@
 
 @protocol BackgroundColorDelegate <NSObject>
 
-- (void)firstVCToSecondVCFadeBackgroundColor;
-
 - (void)secondVCToFirstVCFadeBackgroundColor;
 
 @end
