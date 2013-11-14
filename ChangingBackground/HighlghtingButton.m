@@ -14,7 +14,6 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
     }
     return self;
 }
@@ -27,6 +26,7 @@
         self.backgroundColor = [UIColor whiteColor];
     }
 }
+
 
 /*
 // Only override drawRect: if you perform custom drawing.

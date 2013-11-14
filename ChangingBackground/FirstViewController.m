@@ -25,7 +25,7 @@
     goForwardButtonOutlet.layer.cornerRadius = 8.0f;
     goForwardButtonOutlet.layer.borderColor = [[UIColor darkGrayColor] CGColor];
     goForwardButtonOutlet.layer.borderWidth = 1.0f;
-    
+        
 }
 
 - (IBAction)goForwardButtonPressed {
@@ -33,7 +33,7 @@
     [self.navigationController pushViewController:secondViewController animated:YES];
     
     secondViewController.fadeBackgroundColorDelegate = self;
-}
+    }
 
 - (void)secondVCToFirstVCFadeBackgroundColor {
     //NSLog(@"Hooray, fade background color method was called when user pressed Back");
