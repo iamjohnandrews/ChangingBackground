@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController">
             <connections>
-                <outlet property="goBackButtonOutlet" destination="4" id="dCU-eB-6N6"/>
+                <outlet property="goBackButtonOutlet" destination="4" id="eUB-JL-gzH"/>
                 <outlet property="secondVCDisplayLabel" destination="7" id="SYK-ra-pUz"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -24,16 +24,21 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4" customClass="HighlghtingButton">
                     <rect key="frame" x="118" y="178" width="85" height="44"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <state key="normal" title="Go Back">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <state key="highlighted">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
-                        <action selector="goBackButtonPressed" destination="-1" eventType="touchUpInside" id="10"/>
+                        <action selector="goBackButtonPressed" destination="-1" eventType="touchUpInside" id="9iu-F8-7db"/>
                     </connections>
                 </button>
             </subviews>

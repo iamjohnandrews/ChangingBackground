@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "BackgroundColorDelegate.h"
 #import "SecondViewController.h"
+#import "HighlghtingButton.h"
 
 @interface FirstViewController : UIViewController <BackgroundColorDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *firstVCDisplayLabel;
-
-@property (weak, nonatomic) IBOutlet UIButton *goForwardButtonOutlet;
+@property (weak, nonatomic) IBOutlet HighlghtingButton *goForwardButtonOutlet;
 
 - (IBAction)goForwardButtonPressed;
 

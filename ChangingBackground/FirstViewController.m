@@ -22,12 +22,9 @@
     self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"blue.png"]];
     
     //style the button
-    goForwardButtonOutlet.layer.cornerRadius = 8;
-    goForwardButtonOutlet.backgroundColor = [UIColor whiteColor];
-    
-    //highlight button
-    [goForwardButtonOutlet addTarget:self action:@selector(highlightButtonWhenPressed) forControlEvents:UIControlEventTouchDown];
-    [goForwardButtonOutlet addTarget:self action:@selector(returnButtonToNormalColor) forControlEvents:UIControlEventTouchUpInside];
+    goForwardButtonOutlet.layer.cornerRadius = 8.0f;
+    goForwardButtonOutlet.layer.borderColor = [[UIColor darkGrayColor] CGColor];
+    goForwardButtonOutlet.layer.borderWidth = 1.0f;
     
 }
 
@@ -38,16 +35,8 @@
     secondViewController.fadeBackgroundColorDelegate = self;
 }
 
-- (void)highlightButtonWhenPressed{
-    goForwardButtonOutlet.backgroundColor = [UIColor blueColor];
-}
-
-- (void)returnButtonToNormalColor{
-    goForwardButtonOutlet.backgroundColor = [UIColor whiteColor];
-}
-
 - (void)secondVCToFirstVCFadeBackgroundColor {
-    NSLog(@"Hooray, fade background color method was called when user pressed Back");
+    //NSLog(@"Hooray, fade background color method was called when user pressed Back");
     
     [UIView transitionWithView:nil duration:0.8 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
         self.view.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"green.png"]];
